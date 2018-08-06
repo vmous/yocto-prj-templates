@@ -2,8 +2,15 @@
 # -*- coding: utf-8 -*-
 
 import argparse
+import logging
 import sys
 import traceback
+
+logging.basicConfig(format='%(asctime)s %(levelname)s: %(message)s',
+                    level=logging.INFO, datefmt='%Y-%m-%d %I:%M:%S')
+logger = logging.getLogger(__name__)
+logger.info("Logging Configured")
+
 
 def parse_args(args):
     parser = argparse.ArgumentParser()
