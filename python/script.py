@@ -19,8 +19,11 @@ def parse_args(args):
     args = parser.parse_args(args)
     return args
 
+
 def main():
     args = parse_args(sys.argv[1:])
+
+    return 0
 
 if __name__ == '__main__':
     try:
