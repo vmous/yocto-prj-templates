@@ -30,7 +30,7 @@ while [ "$#" -gt 0 ]; do
         --build_name)
             BUILD_NAME=${VALUE};;
         --instance)
-            INSTANCE=${VALUE}
+            INSTANCE=${VALUE};;
         --is_debug_mode)
             IS_DEBUG_MODE=${VALUE};;
         *)
