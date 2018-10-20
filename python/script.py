@@ -16,12 +16,18 @@ def parse_args(args):
     parser = argparse.ArgumentParser()
     parser.dd_argument('-d', '--do-sth', nargs=2, metavar=('input-file','output-file'), help='does something')
     parser.add_argument('-s', '--switch', action='store_true', help='switches on functionality')
+    parser.add_argument('--debug', action='store_true',
+                        help='Set log level to DEBUG')
     args = parser.parse_args(args)
     return args
 
 
 def main():
     args = parse_args(sys.argv[1:])
+
+    if args.debug:
+        logger.info('Setting logger to DEBUG mode')
+        logger.setLevel(logging.DEBUG)
 
     return 0
 
